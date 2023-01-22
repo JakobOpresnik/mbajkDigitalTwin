@@ -1,0 +1,65 @@
+{
+    "locations": [
+        {
+            "number": 13,
+            "name": "TELEMACH - GLAVNI TRG - STARI PERON",
+            "address": "Glavni trg 20",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.646833,
+                    46.5577328
+                ]
+            },
+            "currentStatus": "OPEN",
+            "currentAvailabilities": {
+            "bikesAvailable": 20,
+            "parkSpots": 20
+            },
+            "historyAvailabitilities": [
+            {
+                "bikesAvailable": 20,
+                "parkSpots": 20,
+                "dateTimeAdded": "2022-05-18T19:52:06.509Z",
+                "_id": "62854e66e3b7fbccd638d97b"
+            }
+            ],
+            "lastUpdateSensor": "2022-05-05T09:51:18Z",
+            "_id": "62854e66e3b7fbccd638d97a",
+            "createdAt": "2022-05-18T19:52:06.546Z",
+            "updatedAt": "2022-05-18T19:52:06.546Z",
+            "__v": 0
+        },
+        {
+            "number": 9,
+            "name": "NKBM - TRG LEONA ŠTUKLJA",
+            "address": "Ulica slovenske osamosvojitve 5",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    15.649072,
+                    46.558519
+                ]
+            },
+            "currentStatus": "OPEN",
+            "currentAvailabilities": {
+            "bikesAvailable": 7,
+            "parkSpots": 20
+            },
+            "historyAvailabitilities": [
+            {
+                "bikesAvailable": 7,
+                "parkSpots": 20,
+                "dateTimeAdded": "2022-05-18T19:56:56.945Z",
+                "_id": "62854f88e3b7fbccd638d988"
+            }
+            ],
+            "lastUpdateSensor": "2022-05-05T10:23:54Z",
+            "_id": "62854f88e3b7fbccd638d987",
+            "createdAt": "2022-05-18T19:56:56.956Z",
+            "updatedAt": "2022-05-18T19:56:56.956Z",
+            "__v": 0
+        }
+    ]
+}
+

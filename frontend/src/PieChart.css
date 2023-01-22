@@ -1,0 +1,35 @@
+#d3-pie-chart {
+    margin: 100px 100px 0px 556px;
+    display: inline-block;
+}
+
+#title {
+    margin: 50px 30px 50px 30px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#streets-list-1 {
+    float: right;
+    margin: 50px 50px 0px 0px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#streets-list-2 {
+    float: right;
+    margin: 50px 556px 0px 0px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#street {
+    margin-bottom: 40px;
+    font-style: italic;
+    font-size: 24px;
+    color: black;
+}

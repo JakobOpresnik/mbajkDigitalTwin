@@ -1,0 +1,212 @@
+// https://jwt.io/introduction/
+
+//
+// TESTING ROUTES
+//
+
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+	"username" : "Jakob",
+	"password" : "jakob123",
+	"email" : "jakob.opresnik@student.um.si"
+}
+
+### get user by JWT in Authorization header
+
+GET http://localhost:3001/users/getByToken
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+
+### get all users
+
+GET http://localhost:3001/users/getAll
+
+### get user by JWT in URL
+
+GET http://localhost:3001/users/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+
+### login user
+
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+    "username": "Jakob",
+    "password": "jakob123"
+}
+
+### logout user
+
+GET http://localhost:3001/users/logout/Jakob
+
+### delete user
+
+DELETE http://localhost:3001/users/Jakob
+
+
+### show all mbajk locations
+
+GET http://localhost:3001/mbajk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYiIsImlhdCI6MTY1MzI0MzkyM30.b6W2ay5VuGnRVUCpGmahgBN9rmmRnTGuKJr3fUxvhE4
+
+### show mbajk location based on ID
+
+GET http://localhost:3001/mbajk/62854ebbe3b7fbccd638d97f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYiIsImlhdCI6MTY1MzI0MjkyNH0.L-wdi1ZgjmlBTbfBaVfTSd8ZFHbuPvQwEX1SeigvG0I
+
+### insert mbajk location
+
+POST http://localhost:3001/mbajk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYiIsImlhdCI6MTY1MzI0MzkyM30.b6W2ay5VuGnRVUCpGmahgBN9rmmRnTGuKJr3fUxvhE4
+Content-Type: application/json
+
+{
+	  "number" : "9",
+    "name" : "NKBM - TRG LEONA ŠTUKLJA",
+    "address" : "Ulica slovenske osamosvojitve 5",
+    "longitude" : "15.649072",
+    "latitude" : "46.558519",
+    "status" : "OPEN",
+    "bikes" : "7",
+    "capacity" : "20",
+    "lastUpdateSensor" : "2022-05-05T10:23:54Z"
+}
+
+
+### insert bike path
+
+POST http://localhost:3001/bikepath
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MzE2Nzk2MH0.KbAikUQBx6IOABmuxOdNV0ijkbamskJwOSoTJQSfPsg
+Content-Type: application/json
+
+{
+    "coordinates": [
+          [
+            15.627771080994304,
+            46.60964403352395
+          ],
+          [
+            15.627809999713907,
+            46.609670000384426
+          ],
+          [
+            15.627900000614453,
+            46.60961000041628
+          ]
+    ]
+}
+
+### delete bike path
+
+DELETE http://localhost:3001/bikepath
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+
+
+### insert bike shed
+
+POST http://localhost:3001/bikeshed
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MzE0MDQ0OX0.pDu_FtkHCsvYMxNEmw2ze3gOfkCHfLg_Jya7ZHntVVc
+Content-Type: application/json
+
+{
+	"providerName" : "Center mobilnosti Maribor",
+	"providerLink" : "https://mobilnost.si/storitve/kolesodvor/",
+	"address" : "Partizanska cesta 50, 2000 Maribor",
+	"quantity" : "20",
+	"longitude" : "15.657430340440774",
+	"latitude" : "46.56223243175121"
+}
+
+###  get all bike sheds
+
+GET http://localhost:3001/bikeshed
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MzE0MDQ0OX0.pDu_FtkHCsvYMxNEmw2ze3gOfkCHfLg_Jya7ZHntVVc
+
+
+### delete bike shed
+
+DELETE http://localhost:3001/bikeshed
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+
+
+### insert coridor
+
+POST http://localhost:3001/coridor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MzE2Nzc0MX0.xUKf2G6tby4OIkm_STRmufZPEBNMrWjyDe71iJWPuL
+Content-Type: application/json
+
+{
+    "coordinates": [
+          [
+            15.627771080994304,
+            46.60964403352395
+          ],
+          [
+            15.627809999713907,
+            46.609670000384426
+          ],
+          [
+            15.627900000614453,
+            46.60961000041628
+          ]
+    ]
+}
+
+### delete coridor
+
+DELETE http://localhost:3001/coridor
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+
+
+### insert bike stand
+
+POST http://localhost:3001/stand
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MzE0MDQ0OX0.pDu_FtkHCsvYMxNEmw2ze3gOfkCHfLg_Jya7ZHntVVc
+Content-Type: application/json
+
+{
+  "name": "28- Trg Leona Štuklja",
+  "parkSpots": "3",
+  "longitude": "15.648152440083422",
+  "latitude": "46.55925299049638"
+}
+
+###  get all bike stands
+
+GET http://localhost:3001/stand
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MzE0MDQ0OX0.pDu_FtkHCsvYMxNEmw2ze3gOfkCHfLg_Jya7ZHntVVc
+
+### delete bike stand
+
+DELETE http://localhost:3001/stand
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+
+
+### insert bike tour path
+
+POST http://localhost:3001/tourpath
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8
+Content-Type: application/json
+
+{
+    "coordinates": [
+        [
+            15.627771080994304,
+            46.60964403352395
+        ],
+        [
+            15.627809999713907,
+            46.609670000384426
+        ],
+        [
+            15.627900000614453,
+            46.60961000041628
+        ]
+    ]
+}
+
+### delete bike tour path
+
+DELETE http://localhost:3001/tourpath
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikpha29iIiwicGFzc3dvcmQiOiJqYWtvYjEyMyIsImlhdCI6MTY1MjAyMDgzMn0.G45kKShICGQJfOTYVsmU6n1dex9b2kPUtkUX721Hlh8

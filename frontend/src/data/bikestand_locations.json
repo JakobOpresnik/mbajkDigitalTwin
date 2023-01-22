@@ -1,0 +1,17 @@
+{
+    "locations": [
+        {
+            "name": "53 - Želežniška postaja Tabor",
+            "parkSpots": "6",
+            "longitude": "15.64577618045837",
+            "latitude": "46.55169014946587"
+        }
+        ,
+        {
+            "name": "28- Trg Leona Štuklja",
+            "parkSpots": "3",
+            "longitude": "15.648152440083422",
+            "latitude": "46.55925299049638"
+        }
+    ]
+}
